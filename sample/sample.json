@@ -1,11 +1,11 @@
 {
     "glossary": {
-    	"//Comment":"this is the root comment",
         "title": "example glossary",
 		"GlossDiv": {
-			"//Comment":"this is a comment in a sub node",
+			"//comments":"this is a comment in a sub node",
             "title": "S",
 			"GlossList": {
+				"//comments":"this is a comment in a sub sub node",
                 "GlossEntry": {
                     "ID": "SGML",
 					"SortAs": "SGML",

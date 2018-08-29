@@ -55,7 +55,7 @@
        "type": null
       }
      ], 
-     "comment": null, 
+     "comment": "this is a comment in a sub sub node", 
      "name": "GlossList", 
      "type": null
     }, 
@@ -63,7 +63,7 @@
      "name": "title"
     }
    ], 
-   "comment": null, 
+   "comment": "this is a comment in a sub node", 
    "name": "GlossDiv", 
    "type": null
   }, 
