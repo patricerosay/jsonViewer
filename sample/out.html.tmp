@@ -1,0 +1,75 @@
+{
+ "children": [
+  {
+   "card": null, 
+   "children": [
+    {
+     "card": null, 
+     "children": [
+      {
+       "card": null, 
+       "children": [
+        {
+         "card": null, 
+         "children": [
+          {
+           "children": [
+            {
+             "name": "GML"
+            }, 
+            {
+             "name": "XML"
+            }
+           ], 
+           "name": "GlossSeeAlso"
+          }, 
+          {
+           "name": "para"
+          }
+         ], 
+         "comment": null, 
+         "name": "GlossDef", 
+         "type": null
+        }, 
+        {
+         "name": "GlossSee"
+        }, 
+        {
+         "name": "Acronym"
+        }, 
+        {
+         "name": "GlossTerm"
+        }, 
+        {
+         "name": "Abbrev"
+        }, 
+        {
+         "name": "SortAs"
+        }, 
+        {
+         "name": "ID"
+        }
+       ], 
+       "comment": null, 
+       "name": "GlossEntry", 
+       "type": null
+      }
+     ], 
+     "comment": null, 
+     "name": "GlossList", 
+     "type": null
+    }, 
+    {
+     "name": "title"
+    }
+   ], 
+   "comment": null, 
+   "name": "GlossDiv", 
+   "type": null
+  }, 
+  {
+   "name": "title"
+  }
+ ], 
+ "name": "root"
+}

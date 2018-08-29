@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: jsonViewer
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/patricerosay/jsonViewer
+Author: Bepeho
+Author-email: contact@bepeho.Com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # jsonviewer
+        
+        ## A better way to present your json file
+        This script creates a tree and presents it in an a D3 HTML so you can drill down into it 
+        and view the first item and the last one at the same time 
+        
+        ```
+        ./jsonViewer.py -i yourfile.json -o destinationFile.html -t "the title"  
+        ```
+        
+        ## Installation
+        Download the projet
+        change directory to jsonViewer
+        Install the package by typing 
+        ```
+        pip install .
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: json

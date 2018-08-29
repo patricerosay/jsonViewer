@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 """Convert a JSON to a graph."""
@@ -89,7 +89,7 @@ def tree2graph(data):
 def main(json_filepath, out_dot_path, htmlTitle="Json Viewer"):
     """IO."""
     # Read JSON
-    with open(json_filepath,encoding='utf-8') as data_file:
+    with open(json_filepath) as data_file:
         data = json.load(data_file)
 
     # Get edges
@@ -98,7 +98,7 @@ def main(json_filepath, out_dot_path, htmlTitle="Json Viewer"):
     exporter = JsonExporter(indent=1, sort_keys=True)
 
     tempFile= out_dot_path+'.tmp'
-    f = open(tempFile, 'w',encoding='utf-8')
+    f = open(tempFile, 'w')
     print(exporter.export(root), file=f)
     f.close()
  
@@ -118,7 +118,7 @@ def main(json_filepath, out_dot_path, htmlTitle="Json Viewer"):
     src='./viewers/treeViewer.html'
     dst=out_dot_path
     copyfile(src, dst)
-    with open(dst, "a",encoding='utf-8') as myfile:
+    with open(dst, "a") as myfile:
         myfile.write(body)
 
 def get_parser():

@@ -7,3 +7,12 @@ and view the first item and the last one at the same time
 ```
 ./jsonViewer.py -i yourfile.json -o destinationFile.html -t "the title"  
 ```
+
+## Installation
+Download the projet
+change directory to jsonViewer
+Install the package by typing 
+```
+pip install .
+```
+
