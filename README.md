@@ -12,7 +12,7 @@ plus, you can comment your nodes and subnodes
 ![screenshot](./sample/screenshot.png)
 ### Execution command
 ```
-python3 ./jsonViewer.py -i sample.json -o out.html -t "Sample"  
+jsonViewer -i sample.json -o out.html -t "Sample"  
 ```
 
 ## Installation
