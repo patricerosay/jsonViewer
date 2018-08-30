@@ -11,7 +11,7 @@ from anytree.exporter import JsonExporter
 import fileinput
 import re
 import pkg_resources
-
+import os
 
 def tree2graph(data):
     """
@@ -107,8 +107,8 @@ def main(json_filepath, out_dot_path, htmlTitle):
     for line in fileinput.input(files=tempFile):
         line = re.sub(find,replace, line.rstrip())
         jsonTreeString= jsonTreeString+line
-        #print(line)
-
+    
+    os.remove(tempFile)
     body='<body onload="onLoadDocument();">'
     body=body+'<h1>'+htmlTitle+'</h1>'
     body=body+' <input id="vdspdata" type="hidden" value=\''+jsonTreeString+'\' />'
