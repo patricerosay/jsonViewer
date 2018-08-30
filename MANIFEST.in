@@ -1,2 +1,2 @@
 include README.rst
-include jsonViewer/treeViwer.html
+include jsonViewer/treeViewer.html
