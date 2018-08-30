@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+import jsonViewer
+args = jsonViewer.get_parser().parse_args()
+jsonViewer.main(json_filepath =args.json_filepath, out_dot_path= args.out_dot_path, htmlTitle= args.htmlTitle)

@@ -1,23 +1,21 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-"""Convert a JSON to a graph."""
 
 from __future__ import print_function
 import json
 import sys
-from pprint import pprint
+
 from anytree import Node, RenderTree
 from shutil import copyfile
 from anytree.exporter import JsonExporter
 import fileinput
 import re
+import pkg_resources
+
 
 def tree2graph(data):
     """
     Convert a JSON to a graph.
-
-    Run `dot -Tpng -otree.png`
 
     Parameters
     ----------
@@ -86,7 +84,8 @@ def tree2graph(data):
    
 
 
-def main(json_filepath, out_dot_path, htmlTitle="Json Viewer"):
+def main(json_filepath, out_dot_path, htmlTitle):
+  
     """IO."""
     # Read JSON
     with open(json_filepath) as data_file:
@@ -115,14 +114,15 @@ def main(json_filepath, out_dot_path, htmlTitle="Json Viewer"):
     body=body+' <input id="vdspdata" type="hidden" value=\''+jsonTreeString+'\' />'
     body=body+'</body>'
 
-    src='./viewers/treeViewer.html'
+    src='treeViewer.html'
+    filepath = pkg_resources.resource_filename(__name__, src)
     dst=out_dot_path
-    copyfile(src, dst)
+    copyfile(filepath, dst)
     with open(dst, "a") as myfile:
         myfile.write(body)
 
 def get_parser():
-    """Get parser object for tree2graph.py."""
+
     from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
     parser = ArgumentParser(description=__doc__,
                             formatter_class=ArgumentDefaultsHelpFormatter)
@@ -137,12 +137,12 @@ def get_parser():
                         dest="out_dot_path",
                         help="html output file",
                         metavar="FILE",
-                        required=False)
+                        required=True)
  
     parser.add_argument("-t", "--title",
                         dest="htmlTitle",
                         help="Title of the generated html",
-                        required=False)                        
+                        required=True)                        
     return parser
 
 def _test():
@@ -151,7 +151,4 @@ def _test():
 
 if __name__ == "__main__":
     args = get_parser().parse_args()
-    if args.json_filepath is None and args.out_dot_path is None:
-        _test()
-    else:
-        main(args.json_filepath, args.out_dot_path, args.htmlTitle)
+    main(  json_filepath =args.json_filepath, out_dot_path= args.out_dot_path, htmlTitle= args.htmlTitle)

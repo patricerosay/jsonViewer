@@ -1,8 +1,11 @@
-README.md
-setup.py
+MANIFEST.in
+README.rst
+bin/jsonViewer
 jsonViewer/__init__.py
+jsonViewer/jsonViewer.py
 jsonViewer.egg-info/PKG-INFO
 jsonViewer.egg-info/SOURCES.txt
 jsonViewer.egg-info/dependency_links.txt
+jsonViewer.egg-info/not-zip-safe
 jsonViewer.egg-info/requires.txt
 jsonViewer.egg-info/top_level.txt
